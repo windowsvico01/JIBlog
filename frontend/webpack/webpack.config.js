@@ -20,8 +20,14 @@ module.exports = {
         rules: [
             {
                 test: /\.(js|jsx)$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader', 
+                    options: {
+                        presets: ['env','stage-0','react'],
+                        plugins:[['import',{'libraryName':'antd','style':'css'}]]
+                    }
+                }
             },{
                 enforce: 'pre',
                 test: /\.(js|jsx)$/,
@@ -42,6 +48,16 @@ module.exports = {
                     loader: 'css-loader',
                     options: {
                         sourceMap: true,
+                    }
+                },{
+                    loader: 'less-loader',
+                    options: {
+                        modifyVars: {
+                            '@primary-color': '#9F79EE',
+                            '@item-active-bg': '#7037e8',
+                            '@item-hover-bg': '#7037e8',
+                        },
+                        javascriptEnabled: true,
                     }
                 }]
             }

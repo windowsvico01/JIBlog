@@ -1,5 +1,5 @@
 /***eslint-disable */
-'use strict'
+'use strict';
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('../webpack/webpack.config');
 const webpack = require('webpack');

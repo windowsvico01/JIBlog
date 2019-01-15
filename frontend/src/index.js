@@ -1,5 +1,5 @@
 /* eslint-disable */
-
+/** 开发环境的入口文件，有热更新 */
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';

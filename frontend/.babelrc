@@ -7,9 +7,11 @@
         }
         ],
         "react",
-        "stage-1"
+        "stage-1",
+        "env"
     ],
     "plugins": [
-        "react-hot-loader/babel"
+        "react-hot-loader/babel",
+        "styled-components"
     ]
 }
